@@ -6,6 +6,8 @@
 
 ```js
 const arr = [2, 3, 4];
+arr.unshift(0,1);
+arr.push(5,6,7);
 
 // your code here
 
@@ -16,25 +18,33 @@ console.log(arr); // => [0, 1, 2, 3, 4, 5, 6, 7]
 
 ```js
 const arr = [5, 7, 9];
-arr.push(6); // returns ???
+arr.push(6); // returns [5,7,9,6]
 ```
 
 3. Change all numbers to be those numbers multiplied by two:
 
 ```js
-const numbers = [4, 9, 7, 2, 1, 8];
+const numbers = [4, 9, 7, 2, 1, 8]; newNumbers=[];
 
-// your code here
+for(let numberel of numbers){
+  newNumbers.push(numberel*2)
+}
+console.log(newNumbers);
 
-numbers; // => [8, 18, 14, 4, 2, 16]
+ // => [8, 18, 14, 4, 2, 16]
 ```
 
 4. Change all **odd** numbers to be those numbers multiplied by two:
 
 ```js
 const numbers = [4, 9, 7, 2, 1, 8];
+const newNumbers2 =[];
 
-// your code here
+for (let numbersEl of numbers){
+  if (numbersEl%2!==0){
+    newNumbers2.push(numbersEl*2)
+  } else {newNumbers2.push(numberEl)}
+} console.log(newNumbers2)
 
 numbers; // => [4, 18, 14, 2, 2, 8]
 ```
